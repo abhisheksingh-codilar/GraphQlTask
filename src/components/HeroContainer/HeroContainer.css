@@ -1,0 +1,50 @@
+
+.heroContainerWrapper{
+    width: 100%;  
+padding: 0 15%;
+}
+.heroContainerInner{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    row-gap: .6rem;
+    column-gap: .6rem;
+    margin-bottom: 2rem;
+  }
+
+  @media only screen and (max-width: 1024px) {
+
+    .heroContainerWrapper{
+    padding: 0 10%;
+    }
+    .heroContainerInner{
+        grid-template-columns: repeat(3,1fr);
+      
+      }
+  }
+
+  @media only screen and (max-width: 700px) {
+
+
+    .heroContainerWrapper{
+        padding: 0 2%;
+        }
+    .heroContainerInner{
+        grid-template-columns: repeat(2,1fr);
+      
+      }
+  }
+  @media only screen and (max-width: 320px) {
+
+
+    .heroContainerWrapper{
+        padding: 0 5%;
+        }
+
+        .heroContainerInner{
+            grid-template-columns: repeat(1,1fr);
+          
+          }
+  
+  }
+
+

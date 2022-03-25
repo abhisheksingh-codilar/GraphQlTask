@@ -1,0 +1,219 @@
+.product{
+    display: flex;
+    margin: 0 10%; 
+    background-color: #fff;
+    padding: 30px;
+    margin-bottom: 50px;
+    border: 1px solid #ddd;
+}
+
+.carousel{
+    width: 50%;
+}
+
+.productContent{
+    width: 50%;
+    padding-left: 2rem;
+}
+
+.ratingProduct{
+    width: 70px;
+    height: 12px;
+    font-size: 0;
+    line-height: 0;
+    background: url(../../../public/star.svg) 0 0 repeat-x;
+    margin-bottom: 10px;
+
+}
+
+.productSocialImages>img{
+    width: 40px;
+    height: 40px;
+    margin-right: 5px;
+}
+
+.title{
+    padding-bottom: 10px;
+}
+
+.title>h2{
+    color: #444;
+    padding-bottom: 10px;
+}
+
+.regularPriceProduct{
+    text-decoration: line-through;
+    margin: 0 5px;
+    color: #999;
+    font-size: 20px;
+    padding-left: 5px;
+}
+.specialPriceProduct{
+    font-size: 15px;
+    margin: 0 5px;
+    font-size: 21px;
+    color: #e12f2f;
+    font-weight: bold;
+
+}
+
+.pricesProduct{
+    padding-bottom: 10px;
+}
+.savedPrice{
+    margin-top: 10px;
+    font-weight: 600;
+   font-size: 14px;
+}
+.checkForm{
+    margin-top: 5px;
+    height: 36px;
+    margin-bottom: 15px;
+}
+.checkForm input{
+    padding-left: 30px;
+    height: 36px;
+    font-size: 100%;
+    border: 1px solid #adadad;
+    line-height: 1.66;
+    background-color: #fff;
+}
+.checkBtn{
+    border: 1px solid #254470;
+    background-color: #254470;
+    color: #fff;
+    cursor: pointer;
+    line-height: 36px;
+    padding: 0 20px;
+    white-space: nowrap;
+    color: #fff;
+    font-weight: 700;
+}
+
+.productAdd{
+    display: flex;
+}
+.productAdd > div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #adadad;
+    background-color: transparent;
+    line-height: 35px;
+    margin-right: 10px;
+    width: 40px;
+    height: 40px;
+    margin-bottom: 20px;
+}
+
+.productSocial span{
+    color: #666666;
+    font-size: 1.2rem;
+    font-weight: 700;
+    line-height: 25px;
+
+}
+
+.productSocialImages{
+    margin-top: 5px;
+
+}
+
+.availableOfferInner{
+    display: inline-block;
+    border: solid 1px #41ad42;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 30px 0 0;
+}
+
+.availableOffers p{
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #666666;
+}
+
+.availableOffers img{
+    margin-right: 5px;
+}
+.highlightText{
+    color: #DE5A59;;
+}
+
+.carousel{
+    height: 60%;
+}
+
+.productData{
+    display: flex;
+    border: 1px solid #ddd;
+    margin: 0 10%; 
+    margin-bottom: 3rem;
+}
+
+.dataList{
+    border-right: 1px solid #ddd;
+    
+}
+li{
+    list-style: none;
+    border-bottom: 1px solid #ddd;
+    font-size: 15px;
+    color: #444;
+    padding: 15px 30px ;
+    cursor: pointer;
+    font-weight: 700;
+
+}
+
+li:focus{
+    background-color: green;
+}
+li:checked{
+    background-color: green;
+}
+.overview:focus{
+    background-color: green;
+}
+li:active{
+    background-color: green;
+}
+
+@media only screen and (max-width: 1000px) {
+    .product{
+        
+        flex-direction: column;
+    }
+    
+    .carousel{
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+    
+    .productContent{
+        width: 100%;
+        padding-left: 0;
+    }
+}
+@media only screen and (max-width: 600px) {
+    
+    .product{
+        margin: 0 5%; 
+        padding: 5px;
+       
+    }
+    .checkForm input{
+        padding-left: 5px;
+      
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    .checkForm input{
+        width: 180px;
+      
+    }
+}
+

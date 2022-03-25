@@ -1,0 +1,21 @@
+@import "~react-image-gallery/styles/css/image-gallery.css";
+
+.image-gallery-slide img {
+
+    height: 350px;
+}
+
+.image-gallery-fullscreen-button {
+    display: none;
+}
+
+
+.image-gallery-play-button {
+    display: none;
+}
+
+.image-gallery-content .image-gallery-slide .image-gallery-image {
+    max-height: calc(100vh - 80px);
+    border: 1px solid #ddd;
+}
+
