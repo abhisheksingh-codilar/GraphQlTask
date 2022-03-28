@@ -1,0 +1,35 @@
+query {
+  products(filter: { price: { gteq: "0" } }) {
+    total_count
+    items {
+      name
+      sku
+
+      price_range {
+        minimum_price {
+          discount {
+            amount_off
+          }
+          final_price {
+            value
+          }
+          regular_price {
+            currency
+            value
+          }
+        }
+      }
+
+      thumbnail {
+        url
+      }
+
+      media_gallery_entries {
+        thumbnail {
+          url
+        }
+        file
+      }
+    }
+  }
+}

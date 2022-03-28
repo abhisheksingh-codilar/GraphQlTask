@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import HeroContainer from './components/HeroContainer/HeroContainer';
-import  Navbar from './components/Navbar/Navbar';
+import Navbar from './components/Navbar/Navbar';
 import Product from './components/Product/Product';
 import sendRequest from './request';
 import './styles/App.css';
@@ -10,61 +10,20 @@ import {
   Route
 } from "react-router-dom";
 
+import { loader } from 'graphql.macro';
+const productQuery = loader('./query/product.graphql');
+
 
 export default class App extends Component {
-  constructor(props) {
+  constructor(props) { 
     super(props)
     this.state = {
       data: null
     }
   }
   componentDidMount() {
-    const query = `
-    query {
-      products(
-        filter: {
-          price:{
-            gteq: "0"
-          }
-        }
-      ) {
-        total_count
-        items {
-          name
-          sku   
-         
-          price_range{
-            minimum_price{
-               discount{
-                amount_off
-              }
-              final_price{
-                value
-              }
-              regular_price{
-                currency
-                value
-              }
-            }
-          }  
-          
-        thumbnail{
-          url
-        }
-          
-          media_gallery_entries{
-            thumbnail{
-              url
-            }
-            file
-          }
-          
-          
-          
-        }
-      }
-    }
-    `
+    const query = productQuery.loc.source.body;
+
     sendRequest({
       query
     }).then(res => {
